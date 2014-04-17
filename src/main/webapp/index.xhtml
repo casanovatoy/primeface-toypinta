@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Layout Learning</title>
+    </h:head>
+    <h:body>
+        <p:layout fullPage="true"
+                  expandTitle="ขยาย"
+                  closeTitle="ปิด"
+                  collapseTitle="ย่อ">
+ 
+            <p:layoutUnit id="north"
+                          position="north"
+                          size="200"
+                          gutter="0"
+                          collapsible="true">
+                <h:outputText value="header"/>
+            </p:layoutUnit>
+ 
+            <p:layoutUnit id="west"
+                          position="west"
+                          size="220"
+                          effectSpeed="1000"
+                          closable="true"
+                          effect="slide"
+                          header="left header"
+                          collapsible="true"
+                          gutter="0">
+                <h:outputText value="left"/>
+            </p:layoutUnit>
+ 
+            <p:layoutUnit id="east"
+                          position="east"
+                          size="100"
+                          gutter="10"
+                          collapsible="true">
+                <h:outputText value="right"/>
+            </p:layoutUnit>
+ 
+            <p:layoutUnit id="center"
+                          position="center">
+                <h:outputText value="center"/>
+            </p:layoutUnit>
+ 
+            <p:layoutUnit id="south"
+                          position="south"
+                          size="40"
+                          gutter="0"
+                          collapsible="true">
+                <h:outputText value="footer"/>
+            </p:layoutUnit>
+        </p:layout>
+    </h:body>
+</html>
+

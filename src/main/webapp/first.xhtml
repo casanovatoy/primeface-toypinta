@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui" >
+    <h:head>
+        <title>first managed bean</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputText value="firstName : "/>
+                <p:inputText value="#{fitstManagedBean.firstName}"/>
+                 <h:outputText value="lastName"/>
+                 <p:inputText value="#{fitstManagedBean.lastName}"/>              
+            </h:panelGrid>
+            <!-- เรียกใช้งาน action method ใน managed bean -->
+            <p:commandButton value="save"
+                             actionListener="#{fitstManagedBean.onAction()}"/> 
+        </h:form>
+    </h:body>
+</html>
